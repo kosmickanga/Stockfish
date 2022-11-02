@@ -10,3 +10,7 @@ src/-lstdc++.res
 # Neural network for the NNUE evaluation
 **/*.nnue
 
+.vs/
+temp/
+bin/
+/src/SFish.vcxproj.user
