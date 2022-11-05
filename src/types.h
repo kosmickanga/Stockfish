@@ -47,6 +47,7 @@
 #pragma warning(disable: 4127) // Conditional expression is constant
 #pragma warning(disable: 4146) // Unary minus operator applied to unsigned type
 #pragma warning(disable: 4800) // Forcing value to bool 'true' or 'false'
+#pragma warning(disable:4996) // sprintf in evaluate_nnue.cpp.
 #endif
 
 /// Predefined macros hell:
@@ -373,11 +374,11 @@ constexpr Color operator~(Color c) {
 }
 
 constexpr Square flip_rank(Square s) { // Swap A1 <-> A8
-  return Square(s ^ SQ_A8);
+  return Square(int(s) ^ int(SQ_A8));
 }
 
 constexpr Square flip_file(Square s) { // Swap A1 <-> H1
-  return Square(s ^ SQ_H1);
+  return Square(int(s) ^ int(SQ_H1));
 }
 
 constexpr Piece operator~(Piece pc) {
@@ -418,7 +419,7 @@ constexpr bool is_ok(Square s) {
 }
 
 constexpr File file_of(Square s) {
-  return File(s & 7);
+  return File(int(s) & 7);
 }
 
 constexpr Rank rank_of(Square s) {
@@ -426,7 +427,7 @@ constexpr Rank rank_of(Square s) {
 }
 
 constexpr Square relative_square(Color c, Square s) {
-  return Square(s ^ (c * 56));
+  return Square(int(s) ^ (c * 56));
 }
 
 constexpr Rank relative_rank(Color c, Rank r) {

@@ -23,6 +23,7 @@
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Stockfish</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Stockfish</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -171,6 +172,16 @@
     <ClInclude Include="misc.h" />
     <ClInclude Include="movegen.h" />
     <ClInclude Include="movepick.h" />
+    <ClInclude Include="nnue\evaluate_nnue.h" />
+    <ClInclude Include="nnue\features\half_ka_v2_hm.h" />
+    <ClInclude Include="nnue\layers\affine_transform.h" />
+    <ClInclude Include="nnue\layers\clipped_relu.h" />
+    <ClInclude Include="nnue\layers\simd.h" />
+    <ClInclude Include="nnue\layers\sqr_clipped_relu.h" />
+    <ClInclude Include="nnue\nnue_accumulator.h" />
+    <ClInclude Include="nnue\nnue_architecture.h" />
+    <ClInclude Include="nnue\nnue_common.h" />
+    <ClInclude Include="nnue\nnue_feature_transformer.h" />
     <ClInclude Include="pawns.h" />
     <ClInclude Include="position.h" />
     <ClInclude Include="search.h" />
@@ -179,6 +190,7 @@
     <ClInclude Include="thread_win32.h" />
     <ClInclude Include="timeman.h" />
     <ClInclude Include="tt.h" />
+    <ClInclude Include="tune.h" />
     <ClInclude Include="types.h" />
     <ClInclude Include="uci.h" />
   </ItemGroup>
@@ -193,6 +205,8 @@
     <ClCompile Include="misc.cpp" />
     <ClCompile Include="movegen.cpp" />
     <ClCompile Include="movepick.cpp" />
+    <ClCompile Include="nnue\evaluate_nnue.cpp" />
+    <ClCompile Include="nnue\features\half_ka_v2_hm.cpp" />
     <ClCompile Include="pawns.cpp" />
     <ClCompile Include="position.cpp" />
     <ClCompile Include="psqt.cpp" />
@@ -201,6 +215,7 @@
     <ClCompile Include="thread.cpp" />
     <ClCompile Include="timeman.cpp" />
     <ClCompile Include="tt.cpp" />
+    <ClCompile Include="tune.cpp" />
     <ClCompile Include="uci.cpp" />
     <ClCompile Include="ucioption.cpp" />
   </ItemGroup>

@@ -20,6 +20,37 @@
     <ClInclude Include="syzygy\tbprobe.h">
       <Filter>syzygy</Filter>
     </ClInclude>
+    <ClInclude Include="nnue\nnue_accumulator.h">
+      <Filter>nnue</Filter>
+    </ClInclude>
+    <ClInclude Include="nnue\nnue_architecture.h">
+      <Filter>nnue</Filter>
+    </ClInclude>
+    <ClInclude Include="nnue\nnue_common.h">
+      <Filter>nnue</Filter>
+    </ClInclude>
+    <ClInclude Include="nnue\nnue_feature_transformer.h">
+      <Filter>nnue</Filter>
+    </ClInclude>
+    <ClInclude Include="nnue\evaluate_nnue.h">
+      <Filter>nnue</Filter>
+    </ClInclude>
+    <ClInclude Include="nnue\features\half_ka_v2_hm.h">
+      <Filter>nnue\features</Filter>
+    </ClInclude>
+    <ClInclude Include="nnue\layers\affine_transform.h">
+      <Filter>nnue\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="nnue\layers\clipped_relu.h">
+      <Filter>nnue\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="nnue\layers\simd.h">
+      <Filter>nnue\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="nnue\layers\sqr_clipped_relu.h">
+      <Filter>nnue\layers</Filter>
+    </ClInclude>
+    <ClInclude Include="tune.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="benchmark.cpp" />
@@ -44,10 +75,26 @@
     <ClCompile Include="syzygy\tbprobe.cpp">
       <Filter>syzygy</Filter>
     </ClCompile>
+    <ClCompile Include="nnue\evaluate_nnue.cpp">
+      <Filter>nnue</Filter>
+    </ClCompile>
+    <ClCompile Include="nnue\features\half_ka_v2_hm.cpp">
+      <Filter>nnue\features</Filter>
+    </ClCompile>
+    <ClCompile Include="tune.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="syzygy">
       <UniqueIdentifier>{4b69a15c-22d0-406d-80fc-279db37e82af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nnue">
+      <UniqueIdentifier>{1233643b-32ce-4c4f-8d81-557002c6e6ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nnue\features">
+      <UniqueIdentifier>{7ee8be11-bbd0-4d57-97e5-d8ef6fcb926b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nnue\layers">
+      <UniqueIdentifier>{4ca96fe7-25ac-402a-882d-f24873b1b5bb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
